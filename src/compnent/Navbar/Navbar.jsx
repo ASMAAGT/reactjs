@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { useSelector } from 'react-redux';
+import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+
+import { Button } from '@mui/material';
+
 
 function Navbar(){
     const state = useSelector((state) => state.handleCart)
@@ -15,7 +19,7 @@ function Navbar(){
     window.addEventListener('scroll', changeBackground);
     return(
         <nav className={nav ? 'nav active' : 'nav'}>
-        <a href="/" className='logo'>
+        <a href="/home" className='logo'>
             store
         </a>
         <input type='checkbox' className='menu-btn' id="menu-btn" />
@@ -23,11 +27,25 @@ function Navbar(){
             <span className='nav-icon'></span>
             </label>
             <ul className='menu'>
-                <li><a href='/'> Home</a></li>
-                <li><a href='/login'>login</a></li>
-                <li><a href='/products'> products</a></li>
-                <li><a href='/cart'> Cart ({state.length})</a></li>
-                <li><a href='/post'> Post</a></li>
+                <li><a href='/home'> HOME</a></li>
+                <li><a href='/products'> PRODUCTS</a></li>
+                <li><a href='/admin'> Espace Admin</a></li>
+                <li>
+                <a href="/post">
+          <Button
+             className="outlined"
+            style={{color: 'black'}}
+            startIcon={<AddShoppingCartOutlinedIcon style={{ color: 'red'}} />}
+            sx={{
+                '&:hover': {
+                  color: 'white !important', 
+                },
+              }}
+          >
+            je Vends !
+          </Button>
+          </a>
+        </li>
 
                 
                 </ul>

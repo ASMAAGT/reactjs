@@ -5,12 +5,12 @@ import Navbar from './Navbar/Navbar'
 export default function Home() {
     return (
         <>
-        <Navbar /> {/* La barre de navigation est toujours affichée */}
+        <Navbar /> 
 
         <div className='hero'>
             <div className="card text-bg-dark text-white border-0">
                 <img src="/assets/bg.jpg" 
-                class="card-img" alt="Background" height="850px"/>
+                class="card-img" alt="Background" height="800px"/>
 
                 <div className="card-img-overlay d-flex flex-column justify-content-center">
 

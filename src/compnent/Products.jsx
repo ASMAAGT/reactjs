@@ -1,6 +1,7 @@
 import React, { useState, useEffect,  } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import { NavLink, useNavigate } from 'react-router-dom/dist';
+import Navbar from './Navbar/Navbar';
 
 
 export default function Products() {
@@ -113,6 +114,9 @@ const handleBuyNow = (productId) => {
 
 
     return (
+        <>
+        <Navbar />
+        
         <div>
             <div className="container my-5 py-5 ">
                 <div className="row">
@@ -127,5 +131,6 @@ const handleBuyNow = (productId) => {
                 </div>
             </div>
         </div>
+        </>
     );
     }
